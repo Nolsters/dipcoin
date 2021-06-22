@@ -95,6 +95,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1485561600; // January 28, 2017
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1517356801; // January 31st, 2018
 
+
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1485561600; // January 28, 2017
@@ -152,7 +153,7 @@ public:
 
         chainTxData = ChainTxData{
             // Data as of block 59c9b9d3fec105bdc716d84caa7579503d5b05b73618d0bf2d5fa639f780a011 (height 1353397).
-            0, // * UNIX timestamp of last known number of transactions
+            1624402699, // * UNIX timestamp of last known number of transactions
             0,  // * total number of transactions between genesis and that timestamp
                     //   (the tx=... number in the SetBestChain debug.log lines)
             0.0     // * estimated number of transactions per second after that timestamp
@@ -233,7 +234,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("0xb29a394fe575ddf83f74fe378e695e49db9758abb9846da7bcbdc7528aab2b06")},
+                {0, uint256S("b29a394fe575ddf83f74fe378e695e49db9758abb9846da7bcbdc7528aab2b06")},
             }
         };
 
@@ -303,14 +304,14 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("0xb29a394fe575ddf83f74fe378e695e49db9758abb9846da7bcbdc7528aab2b06")},
+                {0, uint256S("b29a394fe575ddf83f74fe378e695e49db9758abb9846da7bcbdc7528aab2b06")},
             }
         };
 
         chainTxData = ChainTxData{
             0,
             0,
-            0
+            0.0
         };
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
